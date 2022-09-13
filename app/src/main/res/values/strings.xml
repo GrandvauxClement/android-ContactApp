@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ContactAppExam</string>
+    <string name="add_fragment_title">Add contact</string>
+    <string name="edit_fragment_title">Edit Contact</string>
+    <string name="delete_question">Are you sure you want to delete?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="id">id</string>
+    <string name="fullName_contact">Name</string>
+    <string name="company">company</string>
+    <string name="contact_numTel">phone number</string>
+    <string name="delete">delete</string>
+    <string name="contact_firstname">firstname</string>
+    <string name="contact_lastname">lastname</string>
+    <string name="contact_address">Address</string>
+    <string name="contact_email">Email</string>
+    <string name="contact_sector_activity">Sector Activity</string>
+    <string name="call">Call</string>
+    <string name="localize">Localize</string>
+    <string name="sms">SMS</string>
+    <string-array name="sector_activity_list">
+        <item>Industry</item>
+        <item>Sport</item>
+        <item>Technology</item>
+    </string-array>
+</resources>

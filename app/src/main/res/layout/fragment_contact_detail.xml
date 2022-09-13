@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin"
+    tools:context=".fragment.ContactDetailFragment">
+
+    <TextView
+        android:id="@+id/contact_fullName"
+        style="@style/Widget.Inventory.TextView"
+        android:layout_width="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Screwdrivers" />
+
+    <TextView
+        android:id="@+id/contact_company_label"
+        style="@style/Widget.Inventory.TextView"
+        android:layout_width="wrap_content"
+        android:text="@string/company"
+        app:layout_constraintBaseline_toBaselineOf="@+id/contact_company"
+        app:layout_constraintEnd_toStartOf="@+id/contact_company"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/contact_company"
+        style="@style/Widget.Inventory.TextView"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/margin_between_elements"
+        android:layout_marginTop="@dimen/margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contact_fullName"
+        app:layout_constraintStart_toEndOf="@+id/contact_numTel_label"
+        tools:text="Picom" />
+
+    <TextView
+        android:id="@+id/contact_numTel_label"
+        style="@style/Widget.Inventory.TextView"
+        android:layout_width="wrap_content"
+        android:text="@string/contact_numTel"
+        app:layout_constraintBaseline_toBaselineOf="@+id/contact_numTel"
+        app:layout_constraintEnd_toStartOf="@+id/contact_numTel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/contact_numTel"
+        style="@style/Widget.Inventory.TextView"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/margin_between_elements"
+        android:layout_marginTop="@dimen/margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/contact_numTel_label"
+        app:layout_constraintTop_toBottomOf="@+id/contact_company_label"
+        tools:text="5" />
+
+    <TextView
+        android:id="@+id/contact_address_label"
+        style="@style/Widget.Inventory.TextView"
+        android:layout_width="wrap_content"
+        android:text="@string/contact_address"
+        app:layout_constraintBaseline_toBaselineOf="@+id/contact_address"
+        app:layout_constraintEnd_toStartOf="@+id/contact_address"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/contact_address"
+        style="@style/Widget.Inventory.TextView"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/margin_between_elements"
+        android:layout_marginTop="@dimen/margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/contact_address_label"
+        app:layout_constraintTop_toBottomOf="@+id/contact_numTel_label"
+        tools:text="rue du test 39000 lons" />
+
+   <!-- <TextView
+        android:id="@+id/contact_address"
+        style="@style/Widget.Inventory.TextView"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contact_numTel"
+        tools:text="rue du test 39000 lons" />-->
+
+    <TextView
+        android:id="@+id/contact_email_label"
+        style="@style/Widget.Inventory.TextView"
+        android:layout_width="wrap_content"
+        android:text="@string/contact_email"
+        app:layout_constraintBaseline_toBaselineOf="@+id/contact_email"
+        app:layout_constraintEnd_toStartOf="@+id/contact_email"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/contact_email"
+        style="@style/Widget.Inventory.TextView"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/margin_between_elements"
+        android:layout_marginTop="@dimen/margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/contact_email_label"
+        app:layout_constraintTop_toBottomOf="@+id/contact_address_label"
+        tools:text="test@test.com" />
+
+    <TextView
+        android:id="@+id/contact_sector_activity_label"
+        style="@style/Widget.Inventory.TextView"
+        android:layout_width="wrap_content"
+        android:text="@string/contact_sector_activity"
+        app:layout_constraintBaseline_toBaselineOf="@+id/contact_sector_activity"
+        app:layout_constraintEnd_toStartOf="@+id/contact_sector_activity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/contact_sector_activity"
+        style="@style/Widget.Inventory.TextView"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/margin_between_elements"
+        android:layout_marginTop="@dimen/margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/contact_sector_activity_label"
+        app:layout_constraintTop_toBottomOf="@+id/contact_email_label"
+        tools:text="Informatique" />
+
+    <Button
+        android:id="@+id/favorite_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:text="Feature favoris a faire"
+        app:layout_constraintBottom_toTopOf="@+id/delete_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contact_sector_activity" />
+
+    <Button
+        android:id="@+id/delete_item"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:text="@string/delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/favorite_item" />
+
+    <Button
+        android:id="@+id/call_button"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/call"
+        app:layout_constraintEnd_toStartOf="@+id/localize_button"
+        app:layout_constraintHorizontal_bias="0.268"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delete_item" />
+
+    <Button
+        android:id="@+id/localize_button"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/localize"
+        app:layout_constraintEnd_toStartOf="@+id/sms_button"
+        app:layout_constraintTop_toBottomOf="@+id/delete_item" />
+
+    <Button
+        android:id="@+id/sms_button"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/sms"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delete_item" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/edit_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_between_elements"
+        android:layout_marginBottom="@dimen/margin_between_elements"
+        android:contentDescription="edit"
+        android:src="@drawable/ic_edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@android:color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

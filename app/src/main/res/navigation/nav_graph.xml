@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/contactListFragment">
+
+    <fragment
+        android:id="@+id/contactListFragment"
+        android:name="fr.grandvauxclement.contactappexam.fragment.ContactListFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/contact_list_fragment">
+
+        <action
+            android:id="@+id/action_contactListFragment_to_contactDetailFragment"
+            app:destination="@id/contactDetailFragment" />
+        <action
+            android:id="@+id/action_contactListFragment_to_addContactFragment"
+            app:destination="@id/addContactFragment" />
+        <argument
+            android:name="favourite"
+            app:argType="string"
+            android:defaultValue="false"
+            />
+        <action
+            android:id="@+id/action_contactListFragment_to_contactListFragment"
+            app:destination="@id/contactListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactDetailFragment"
+        android:name="fr.grandvauxclement.contactappexam.fragment.ContactDetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_contact_detail">
+        <argument
+            android:name="item_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_contactDetailFragment_to_addContactFragment"
+            app:destination="@id/addContactFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addContactFragment"
+        android:name="fr.grandvauxclement.contactappexam.fragment.AddContactFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_add_contact">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="item_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_addContactFragment_to_contactListFragment"
+            app:destination="@id/contactListFragment"
+            app:popUpTo="@id/contactListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
